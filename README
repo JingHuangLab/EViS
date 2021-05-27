@@ -1,0 +1,58 @@
+EViS: an Enhanced Virtual Screening Approach based on Pocket Ligand Similarity
+
+Copyright (C) 2021 Wenyi Zhang, Jing Huang
+
+This program is free software: you can redistribute it and/or modify it 
+under the terms of the GNU General Public License as published by the 
+Free Software Foundation, either version 3 of the License, or (at your 
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but 
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
+for more details.You should have received a copy of the GNU General Public 
+License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+------- general information on how to run EViS ------------
+python version : 2
+gcc: gcc-8.3.0
+
+EViS virtual screening program needs two consecutive steps (please ensure
+the last step was completed before running the next step):
+
+        1, prepare the compounds (MOL2 format) and pocket ('.POC' format) into the input folder
+        2, runEViS.py
+        
+
+1. prepare the input files
+
+put all compounds (MOL2 format) into /EViS/user_input/results_docking/ligand_mol2/
+put the pocket file (named as "nativepocket.poc") into the /EViS/user_input/results_docking/pocket/
+The pocket is like as:
+
+POC     nativepocket
+ATOM    253  N   VAL A  49       6.937   3.497 -28.457  1.00 34.68           N
+ATOM    254  CA  VAL A  49       6.465   2.179 -28.887  1.00 34.68           C
+ATOM    255  C   VAL A  49       5.665   2.297 -30.179  1.00 34.68           C
+ATOM    256  O   VAL A  49       5.965   1.651 -31.192  1.00 34.68           O
+...
+TRE 
+
+2. run EViS
+For exmple：
+cd /EViS/webserver/script/
+python runEViS.py
+
+input:
+    ligands_mol2: all ligands with MOL2 format which are from docking.
+    pocket: nativepocket.poc, the first line is named as "POC   pocket"
+Note:
+    If you want to change the pocket size, please modify in line 11 of "ppsalign.py".
+    The defalut valuse is "POC", you can change as "POC_6A", "POC_7A" and "POC_8A".
+output: 
+    The pocket similarity result is saved as pocket_topN.info in "pocket" folder. 
+    The ligand similarity score results are saved in the "ligand_mol2" folder.
+    The PLscore.result into the /EViS/user_input/results_docking/
+
+----------------------------------------------------------
+Wenyi Zhang (zhangwenyi@westlake.edu.cn), JingHuang (Huangjing@westlake.edu.cn)
