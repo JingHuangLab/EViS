@@ -17,6 +17,17 @@ The docking poses (**MOL2 format**) obtained by any docking programs can be eval
 * numpy: numpy 1.16.6 
 * git clone: https://github.com/JingHuangLab/EViS.git
 
+### Download and unzip the EViS package 
+* git clone https://github.com/JingHuangLab/EViS.git
+
+* running the following commands 
+```
+cd EViS 
+tar -xvzf user_input.tar.gz 
+module load gcc/gcc-8.3.0 
+```
+
+
 ### Executing program
 
 EViS program needs two consecutive steps (please ensure the last step was completed before running the next step):
@@ -44,7 +55,7 @@ If you are still not sure the input files, you can check the [example files](use
 For exmple：
 ```
 cd /EViS/webserver/script/
-python runEViS.py
+python run_EViS.py
 ```
 
 output:

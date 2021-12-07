@@ -40,7 +40,7 @@
   4alk_E9P_A_1.pdb 6513_replica-1.pdb     0.5844     0.3597   0.021238   0.529943     0.2727     5.7149             16             26
   4fs3_0WE_A_1.pdb 6513_replica-1.pdb     0.4665     0.5024   0.398284   0.240369     0.2857     2.6243             28             26
 
-Using 0.01-s to load mol2 files.
+Using 0-s to load mol2 files.
 Using 1.19-s to do LS-align. 
-Totally Using 1.2-s.
+Totally Using 1.19-s.
 

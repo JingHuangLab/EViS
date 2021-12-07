@@ -6,7 +6,7 @@ import subprocess
 scriptdir=os.path.dirname(os.path.abspath(__file__))
 rootdir=os.path.dirname(scriptdir)
 
-BioLip = '/home/zhangwy/dataset/BioLip/' #update 
+BioLip = rootdir + '/BioLip/' #update 
 
 poc_size = 'POC'
 ###############################################################

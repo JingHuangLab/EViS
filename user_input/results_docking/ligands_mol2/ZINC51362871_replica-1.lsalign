@@ -41,6 +41,6 @@
   4fs3_0WE_A_1.pdb 2871_replica-1.pdb     0.4425     0.5900   0.360499   0.037920     0.2895     4.3837             28             21
 
 Using 0-s to load mol2 files.
-Using 1-s to do LS-align. 
-Totally Using 1-s.
+Using 0.99-s to do LS-align. 
+Totally Using 0.99-s.
 

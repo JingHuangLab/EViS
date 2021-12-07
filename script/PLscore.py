@@ -87,6 +87,7 @@ for ii in range(len(ligand_list)):
 
 #### testing
 for tt in range(len(ligand_list)):
+    #print (ligand_list[tt])
     tmp_TS = list()       
     for mm in range(len(pocket_score)):
         #print pocket_score[mm]

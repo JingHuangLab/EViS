@@ -8,17 +8,18 @@ scriptdir=os.path.dirname(os.path.abspath(__file__))
 rootdir=os.path.dirname(scriptdir)
 outputdir = rootdir + '/user_input/results_docking/pocket/'
 
-poc_size = 'POC'
 BioLip = rootdir + '/BioLip/'
 
+poc_size = 'POC'
+
 ###############################################################
-print os.listdir(rootdir+'/user_input/results_docking/pocket/')
+#print (os.listdir(rootdir+'/user_input/results_docking/pocket/')
 for ii in os.listdir(rootdir+'/user_input/results_docking/pocket/'):
     if ('.poc' in ii):
         pocketname = str(ii)
         break
 targetname = pocketname.split('.poc')[0]
-print pocketname
+print (pocketname)
 
 fp = open('pocket_num','r')
 fpreader = fp.read()

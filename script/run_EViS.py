@@ -5,7 +5,8 @@ import subprocess
 import time
 scriptdir=os.path.dirname(os.path.abspath(__file__))
 rootdir=os.path.dirname(scriptdir)
-BioLip = rootdir + '/BioLip/'
+BioLip = '/home/zhangwy/dataset/BioLip/'  ### update
+
 
 #### step 1: ppsalign
 print ("step1/4 run PPS-align")
@@ -38,6 +39,10 @@ for mol2_item in (os.listdir(rootdir +'/user_input/results_docking/ligands_mol2/
 for ii in range(len(total_mol2)):
     lsalign_index = lsalign_index + 1
     print ('LSalign ' + total_mol2[ii] + ' ----' + str(lsalign_index) + '/' + str(len(total_mol2)))
+    #if(os.path.exists(rootdir + '/user_input/results_docking/ligands_mol2/'+total_mol2[ii].split('.mol2')[0]+'.lsalign') and (os.path.getsize(rootdir + '/user_input/results_docking/ligands_mol2/'+total_mol2[ii].split('.mol2')[0]+'.lsalign'))):
+    #    print (total_mol2[ii] + 'has been aligned by LS-align')
+    #    continue
+
     command2 = scriptdir + '/LSalignO pocket_topN.mol2 ' + total_mol2[ii] + ' >' + total_mol2[ii].split('.mol2')[0]+'.lsalign'
     stdout,stderr = subprocess.Popen(';'.join([command1, command2]),shell=True).communicate() 
 
