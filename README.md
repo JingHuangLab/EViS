@@ -2,6 +2,8 @@
 
 An Enhanced Virtual Screening Approach based on Pocket Ligand Similarity
 
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the 
+Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 ## About EViS
 
 EViS is an enhanced virtual screening method which integrates ligand docking, protein pocket template searching and ligand template shape similarity calculating. A novel **PL-score** to characterize local pocket-ligand template similarity is used to evaluate the screening compounds.
