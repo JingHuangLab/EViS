@@ -34,9 +34,9 @@ EViS program needs two consecutive steps (please ensure the last step was comple
 
 1, prepare the screening compounds (**MOL2 format**) and pocket (**'.POC' format**) into the input folder.
 
-* put all compounds (MOL2 format) into **(/EViS/user_input/results_docking/ligand_mol2/)** subfolder.
+* put all compounds (MOL2 format) into (**user_input/results_docking/ligand_mol2/**) subfolder.
 
-* put the pocket file (**named as "nativepocket.poc"**) into the (**/EViS/user_input/results_docking/pocket/**) subfolder.
+* put the pocket file (**named as "nativepocket.poc"**) into the (**user_input/results_docking/pocket/**) subfolder.
 
     The pocket is like as:
 ```
@@ -54,7 +54,7 @@ If you are still not sure the input files, you can check the [example files](use
 
 For exmple：
 ```
-cd /EViS/webserver/script/
+cd script
 python run_EViS.py
 ```
 
@@ -79,10 +79,6 @@ If you have any questions, please contact with Wenyi Zhang(zhangwenyi@westlake.e
 
 * Wenyi Zhang (zhangwenyi@westlake.edu.cn)
 * JingHuang (Huangjing@westlake.edu.cn)
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
